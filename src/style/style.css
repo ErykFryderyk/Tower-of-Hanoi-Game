@@ -9,7 +9,8 @@ body {
   font-family: 'Nunito', sans-serif; }
 
 header {
-  background-color: #2a67c2; }
+  background-color: #2a67c2;
+  position: relative; }
 
 .title {
   text-align: center;
@@ -18,6 +19,21 @@ header {
   font-size: 28px;
   font-weight: 400;
   padding: 20px 0; }
+
+.button-box {
+  background-color: #fff;
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.btn {
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  font-size: 20px; }
 
 .container {
   margin: 0 auto;
@@ -86,7 +102,7 @@ header {
   text-align: center;
   font-size: 22px;
   color: #505591;
-  transition: border .5s ease-in-out, transform .5s ease-in-out, box-shadow .5s ease-in-out; }
+  transition: border .1s ease-in-out, transform .1s ease-in-out, box-shadow .1s ease-in-out; }
   .block--even {
     background-color: #97ac24; }
   .block--active {
@@ -131,6 +147,23 @@ header {
   .start-btn:hover, .start-btn:focus {
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.7);
     background-color: #0e56c2; }
+
+.modal-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(12, 52, 85, 0.712);
+  z-index: 999;
+  display: none;
+  justify-content: center;
+  align-items: center; }
+  .modal-shadow .modal-box {
+    width: 400px;
+    height: 400px;
+    background-color: gray;
+    text-align: center; }
 
 @media (min-width: 560px) {
   .column-box {

@@ -30,7 +30,9 @@ body{
 }
 header{
     background-color: $blue;
+    position: relative;
 }
+
 
 .title{
     text-align: center;
@@ -41,6 +43,23 @@ header{
     font-weight: 400;
     padding: 20px 0;
     
+}
+
+.button-box{
+    background-color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
 }
 .container{
     margin: 0 auto;
@@ -118,7 +137,7 @@ header{
     text-align: center;
     font-size: 22px;
     color: $purple;
-    transition: border .5s ease-in-out, transform .5s ease-in-out, box-shadow .5s ease-in-out;
+    transition: border .1s ease-in-out, transform .1s ease-in-out, box-shadow .1s ease-in-out;
 
     &--even{
         background-color: $yellow-second;
@@ -185,6 +204,25 @@ header{
         background-color: $dark-blue;
     }
 }
+
+.modal-shadow{
+    position: absolute;
+    top: 0;left: 0;bottom: 0;right: 0;
+    background-color: rgba(12, 52, 85, 0.712);
+    z-index: 999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    .modal-box{
+        width: 400px;
+        height: 400px;
+        background-color: gray;
+        text-align: center;
+    
+    }
+}
+
 
 @media (min-width: 560px) {
 
