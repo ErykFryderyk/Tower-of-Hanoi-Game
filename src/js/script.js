@@ -12,41 +12,45 @@
 //     })
 // })
 
+const $blocks = document.querySelectorAll('.block');
+console.log($blocks.length);
 
 let activeBlock = null;
-// const numberOfAllBlocks = $blocks.length;
-
 
 const main = () => {
     prepareDOMElements();
     prepareDOMEvents();
-
+    
 }
 
 const prepareDOMElements = () => {
     $gameBoard = document.querySelector('.game-board');
-    $blocks = document.querySelectorAll('.block');
-    $lastColumn = document.querySelector('column-box__last-element')
-
-};
+    $lastColumn = document.querySelector('.column-box__last-element');
+    $btnRules = document.querySelector('.btn-rules');
+    $modalShadow = document.querySelector('.modal-shadow');
+    $btnCloseModal = document.querySelector('.btn-close-modal')
+}
 
 const prepareDOMEvents = () => {
-    $gameBoard.addEventListener('click', e => {
-        selectBlock(e);
-    })
+    $gameBoard.addEventListener('click', e => selectBlock(e));
+
+    $btnRules.addEventListener('click', showModal);
+    $btnCloseModal.addEventListener('click', showModal);
+
 };
 
 
 const selectBlock = e => {
+    const target = e.target;
+    const parent = target.parentElement;
 
-    const target = e.target;  
-    console.log(target);
     if(activeBlock === null) {
-        if(target.children.length === 0){
-            return;
-        }else {
+        if(target.children.length !== 0){
             target.firstElementChild.classList.add('block--active');
-            activeBlock = target.firstElementChild
+            activeBlock = target.firstElementChild;
+        }else if(target.classList.contains('block')){
+            parent.firstElementChild.classList.toggle('block--active');
+            activeBlock = parent.firstElementChild;
         }
     } else {
         moveBlock(e);
@@ -55,6 +59,8 @@ const selectBlock = e => {
 
 const moveBlock = e => {
     const target = e.target;
+    const parent = target.parentElement;
+    console.log(parent);
     if(target.classList.contains('column-box')){
         if(target.children.length === 0) {
             createNewBlock(target);
@@ -66,7 +72,7 @@ const moveBlock = e => {
     }
     activeBlock.classList.remove('block--active');
     activeBlock = null;
-    activeBlock();
+    
     checkWin();
 }
 
@@ -76,12 +82,35 @@ const createNewBlock = (target) => {
     div.classList = activeBlock.classList;
     div.innerText = activeBlock.textContent;
     div.id = activeBlock.id;
+    div.classList.remove('active');
     
 
-    div.classList.remove('active');
     target.prepend(div);
     activeBlock.remove();
 }
+
+const checkWin = () => {
+    numberOfAllBlocks = $blocks.length;
+    console.log(numberOfAllBlocks);
+
+    if ($lastColumn.children.length === numberOfAllBlocks) {
+        setTimeout(function () {
+            alert('youwon')
+        }, 100);   
+    }
+}
+
+const showModal = () => {
+    if(!($modalShadow.style.display === 'flex')){
+        $modalShadow.style.display = 'flex';
+    } else {
+        $modalShadow.style.display = 'none';
+    }
+
+    // modalShadow.classList.toggle('')
+}
+
+
 
 
 document.addEventListener('DOMContentLoaded', main);
