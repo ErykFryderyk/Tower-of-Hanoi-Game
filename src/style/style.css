@@ -10,7 +10,8 @@ body {
 
 header {
   background-color: #2a67c2;
-  position: relative; }
+  position: relative;
+  margin-bottom: 10px; }
 
 .title {
   text-align: center;
@@ -18,7 +19,7 @@ header {
   font-family: 'Grandstander', cursive;
   font-size: 28px;
   font-weight: 400;
-  padding: 20px 0; }
+  padding: 10px 0; }
 
 .button-box {
   background-color: #fff;
@@ -50,14 +51,14 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   width: 100%;
   min-height: calc(100vh - 70px);
   background-color: black; }
 
 .column-box {
-  width: 100%;
-  height: 460px;
+  width: 170px;
+  margin-right: 5px;
+  height: 250px;
   position: relative;
   display: flex;
   justify-content: flex-end;
@@ -83,7 +84,7 @@ header {
   .column-box::after {
     content: '';
     position: absolute;
-    width: 90%;
+    width: 50%;
     border: 10px solid #505591;
     border-radius: 10px;
     height: 50px;
@@ -91,6 +92,8 @@ header {
     left: 50%;
     bottom: 0;
     transform: translateX(-50%); }
+  .column-box:last-child {
+    margin-right: 0; }
 
 .block {
   height: 50px;
@@ -164,15 +167,3 @@ header {
     height: 400px;
     background-color: gray;
     text-align: center; }
-
-@media (min-width: 560px) {
-  .column-box {
-    width: 250px; } }
-
-@media (min-width: 960px) {
-  .column-box {
-    width: 300px; } }
-
-@media (min-width: 1260px) {
-  .column-box {
-    width: 400px; } }
