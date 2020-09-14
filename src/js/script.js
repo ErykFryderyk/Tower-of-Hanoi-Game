@@ -72,7 +72,6 @@ const moveBlock = e => {
     }
     activeBlock.classList.remove('block--active');
     activeBlock = null;
-    
     checkWin();
 }
 
@@ -82,7 +81,7 @@ const createNewBlock = (target) => {
     div.classList = activeBlock.classList;
     div.innerText = activeBlock.textContent;
     div.id = activeBlock.id;
-    div.classList.remove('active');
+    div.classList.remove('block--active');
     
 
     target.prepend(div);
@@ -106,8 +105,6 @@ const showModal = () => {
     } else {
         $modalShadow.style.display = 'none';
     }
-
-    // modalShadow.classList.toggle('')
 }
 
 

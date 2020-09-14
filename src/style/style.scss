@@ -1,6 +1,6 @@
 $black: #000;
 $white: #fff;
-$light-gray: #d6d6d6;
+$light-gray: #e0e0e0;
 $gray: #a7a7a7;
 $purple: #505591;
 $dark-purple: #393e74;
@@ -10,7 +10,7 @@ $dark-blue: #0e56c2;
 $brown: #aa6601;
 $yellow: #bbd42c;
 $yellow-second: #97ac24;
-$green: #5fced6;
+$green: #45d4df;
 
 
 $brown-gradient: linear-gradient(0deg, rgba(170, 102, 1, 1) 0%, rgba(217, 130, 0, 1) 50%, rgb(214, 145, 1) 100%);
@@ -42,8 +42,7 @@ header{
     cursive;
     font-size: 28px;
     font-weight: 400;
-    padding: 10px 0;
-    
+    padding: 10px 0;  
 }
 
 .button-box{
@@ -68,24 +67,35 @@ header{
     padding: 0 15px 0 15px;
     width: 100%;
 }
+.wrapper{
+    background-color: green;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 .start-game{ 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 20px 20px;
+    width: 300px;
 }
 
 .game-board{
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
     min-height: calc(100vh - 70px);
+
+    &--show{
+        display: flex;
+    }
 }
-
-
 
 .column-box{
     width: 100%;
@@ -97,12 +107,15 @@ header{
     align-items: center;
     flex-direction: column;
     cursor: pointer;
-    background-color: $light-gray;
-    transition: background-color .3s ease-in-out;
+    background-color: transparent;
+    border-radius: 15px;
+    transition: background-color .3s ease-in-out, box-shadow .3s
+     ease-in-out;
 
     &:hover{
-        background-color: $gray;
-    }
+        background-color: $light-blue;
+        box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.7);
+}
 
     &::before{
        content: ''; 
@@ -232,8 +245,9 @@ header{
     }
 }
 
-
+// ---------------------
 // MEDIA QUERIES
+// ---------------------
 
 @media(min-width: 568px) {
     .game-board {
@@ -246,7 +260,16 @@ header{
     }
 }
 
+@media(min-width: 768px){
+    .title{
+        font-size: 34px;
+    }
+}
+
 @media(min-width: 1024px) {
+    .title{
+        font-size: 40px;
+    }
     .column-box {
         min-height: 340px;
 
@@ -270,6 +293,12 @@ header{
 }
 
 @media(min-width: 1200px){
+    .title {
+        font-size: 46px;
+    }
+    .game-board{
+        min-height: calc(100vh - 80px);
+    }
     .column-box{
         min-height: 500px;
         &::before {
