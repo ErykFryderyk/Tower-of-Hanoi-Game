@@ -21,18 +21,19 @@
     </header>
 
     <div class="container">
-        <div class="wrapper" style="">
+        <div class="wrapper" style="display:">
             <div class="start-game">
-                <h2>Welcome in game</h2>
-                <label for="block-number">Liczna krążków</label>
-                <input class="input" type="number" name="block-number" value='3' min="3" max="7">
-                
-                <button class="start-btn">Start game!</button>
+                <h2>Witaj w grze! </h2>
+                <div class="start-game__settings">
+                    <label for="block-number">Wybierz liczbę krążków: </label>
+                    <input class="input" type="number" name="block-number" value='3' min="3" max="7">
+                </div>
+                <button class="start-btn">Start!</button>
             </div>
         </div>
     </div>
     <div class="container">
-        <div class="game-board">
+        <div class="game-board ">
             <div class="column-box ">
                 <div class="block block--width-1" id="1">1</div>
                 <div class="block block--even block--width-2" id="2">2</div>
