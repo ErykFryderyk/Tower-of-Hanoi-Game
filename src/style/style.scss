@@ -11,6 +11,7 @@ $brown: #aa6601;
 $yellow: #bbd42c;
 $yellow-second: #97ac24;
 $green: #45d4df;
+$green2:#3bbcc5;
 
 
 $brown-gradient: linear-gradient(0deg, rgba(170, 102, 1, 1) 0%, rgba(217, 130, 0, 1) 50%, rgb(214, 145, 1) 100%);
@@ -82,6 +83,7 @@ header{
     flex-direction: column;
     padding: 20px 20px;
     width: 300px;
+    background-color: $green2;
 
     h2{
         margin-bottom: 20px;
@@ -100,6 +102,8 @@ header{
     flex-direction: column;
     width: 100%;
     min-height: calc(100vh - 70px);
+    background-color: $green2;
+
 
     &--show{
         display: flex;
@@ -117,14 +121,14 @@ header{
     flex-direction: column;
     cursor: pointer;
     background-color: transparent;
-    border-radius: 15px;
+    border-radius: 5px;
     transition: background-color .3s ease-in-out, box-shadow .3s
      ease-in-out;
 
     &:hover{
         background-color: $light-blue;
         box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.7);
-}
+    }
 
     &::before{
        content: ''; 
@@ -132,7 +136,7 @@ header{
        height: 90%;
        width: 20px;
        background-color:$light-blue;
-       border: 5px solid $purple;
+       border: 5px solid $blue;
        border-radius: 25px;
        left: 50%;
        bottom: 5px;
@@ -144,7 +148,7 @@ header{
         position: absolute;
         width: 90%;
         height: 30px;
-        border: 5px solid $purple;
+        border: 5px solid $blue;
         border-radius: 10px;
         background: $brown-gradient;
         left: 50%;
@@ -161,7 +165,7 @@ header{
 
 .block{
     height: 29px;
-    border: 5px solid $purple;
+    border: 5px solid $blue;
     background-color: $yellow;
     border-radius: 50px;
     z-index: 1;
@@ -201,8 +205,6 @@ header{
     &--width-7 {
         width: 75%;
     }
-
-
 }
 
 .block:last-child{

@@ -11,7 +11,11 @@ const main = () => {
 }
 
 const prepareDOMElements = () => {
+    $btnStart = document.querySelector('.start-btn');
+    $wrapper = document.querySelector('.wrapper');
+    $input = document.querySelector('.input');
     $gameBoard = document.querySelector('.game-board');
+    $columnBox = document.querySelector('.column-box');
     $lastColumn = document.querySelector('.column-box__last-element');
     $btnRules = document.querySelector('.btn-rules');
     $modalShadow = document.querySelector('.modal-shadow');
@@ -20,12 +24,29 @@ const prepareDOMElements = () => {
 
 const prepareDOMEvents = () => {
     $gameBoard.addEventListener('click', e => selectBlock(e));
-
-    $btnRules.addEventListener('click', showModal);
+    $btnStart.addEventListener('click', startGame);
+    // $btnRules.addEventListener('click', showModal);
     $btnCloseModal.addEventListener('click', showModal);
+};
+
+
+const startGame = () =>{
+    let inputBlocks = $input.value;
+    $wrapper.style.display = 'none';
+    $gameBoard.classList.add('game-board--show');
+
+    if(inputBlocks > 7){
+        inputBlocks = 7;
+    } else if(inputBlocks < 3){
+        inputBlocks = 3;
+    }
+    createBlocksToStart(inputBlocks);
 
 };
 
+const createBlocksToStart = (numberBlocks) => {
+    console.log(`to bedzie funkcja: ${numberBlocks}`);
+}
 
 const selectBlock = e => {
     const target = e.target;
