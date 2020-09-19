@@ -32,6 +32,7 @@ const prepareDOMEvents = () => {
 
 const startGame = () =>{
     let inputBlocks = $input.value;
+    inputBlocks = parseInt(inputBlocks);
     $wrapper.style.display = 'none';
     $gameBoard.classList.add('game-board--show');
 
@@ -44,8 +45,23 @@ const startGame = () =>{
 
 };
 
-const createBlocksToStart = (numberBlocks) => {
-    console.log(`to bedzie funkcja: ${numberBlocks}`);
+const createBlocksToStart = (numberBlocks) => {    
+
+    for (let i = numberBlocks; i > 0; i--) {
+        let number = i;
+        console.log(number);    
+        
+        const div = document.createElement('div');
+        div.classList.add('block');
+        div.classList.add(`block--width-${number}`);
+        div.innerHTML = number;
+        div.id = number;
+        if (number % 2 == 0){
+            div.classList.add('block--even');
+        }
+
+        $columnBox.prepend(div);
+    }
 }
 
 const selectBlock = e => {
