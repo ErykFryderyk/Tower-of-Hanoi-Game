@@ -96,7 +96,7 @@ const moveBlock = e => {
     }
     activeBlock.classList.remove('block--active');
     activeBlock = null;
-    checkWin();
+    // checkWin();
 }
 
 const createNewBlock = (target) => {

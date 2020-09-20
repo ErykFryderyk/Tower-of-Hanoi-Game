@@ -9,15 +9,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@300;400;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
 
+    <!-- Awesome Fonts -->
+    <script src="https://kit.fontawesome.com/643726dbb6.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="/src/style/style.css">
 </head>
 <body>
     <header>
         <h1 class="title">Tower of Hanoi</h1>
-        <!-- <div class="button-box">
-            <button class="btn btn-rules">?</button>
-            <button class="btn btn-restart"><<</button>
-        </div> -->
     </header>
 
     <div class="container">
@@ -52,13 +51,25 @@
         </div>
     </div>
 
+    <div class="button-box">
+        <button class="btn btn__rules" title="Zasady gry">
+            <i class="far fa-question-circle"></i>
+        </button>
+        <button class="btn btn__restart" title="Zagraj jeszcze raz">
+            <i class="fas fa-sync-alt"></i>
+        </button>
+    </div>
+
     <div class="modal-shadow">
         <div class="modal-shadow__box">
-            <button class="btn-close-modal">X</button>
+            <button class="btn-close-modal">
+                <i class="far fa-times-circle"></i>
+            </button>
             <h3>Zasady gry</h3>
             <!-- gif -->
         </div>
     </div>
+
 
 
     <script src="/src/js/script.js"></script>    

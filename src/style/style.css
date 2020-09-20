@@ -4,7 +4,7 @@
   box-sizing: border-box; }
 
 body {
-  background-color: #45d4df;
+  background-color: #e0e0e0;
   color: #fff;
   font-family: 'Nunito', sans-serif; }
 
@@ -22,19 +22,31 @@ header {
   padding: 10px 0; }
 
 .button-box {
-  background-color: #fff;
   position: absolute;
-  top: 10px;
-  right: 30px;
+  display: flex;
+  flex-direction: column;
+  top: 60px;
+  right: 10px;
   display: flex;
   justify-content: center;
   align-items: center; }
 
 .btn {
-  padding: 10px 20px;
+  color: #67cdfc;
+  padding: 7px 10px;
   cursor: pointer;
   border: none;
-  font-size: 20px; }
+  font-size: 23px;
+  border-radius: 25px;
+  outline: none;
+  transition: box-shadow .3s ease-in-out; }
+  .btn__rules {
+    margin-bottom: 2px;
+    font-size: 25px; }
+  .btn__restart {
+    display: none; }
+  .btn:hover, .btn:focus {
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.7); }
 
 .container {
   margin: 0;
