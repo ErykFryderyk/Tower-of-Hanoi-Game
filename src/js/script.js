@@ -13,13 +13,14 @@ const main = () => {
 const prepareDOMElements = () => {
     $btnStart = document.querySelector('.start-btn');
     $wrapper = document.querySelector('.wrapper');
-    $input = document.querySelector('.input');
+    $input = document.querySelector('.counter-input');
     $gameBoard = document.querySelector('.game-board');
     $columnBox = document.querySelector('.column-box');
     $lastColumn = document.querySelector('.column-box__last-element');
     $btnRules = document.querySelector('.btn-rules');
     $modalShadow = document.querySelector('.modal-shadow');
     $btnCloseModal = document.querySelector('.btn-close-modal')
+    
 }
 
 const prepareDOMEvents = () => {
@@ -32,6 +33,9 @@ const prepareDOMEvents = () => {
 
 const startGame = () =>{
     let inputBlocks = $input.value;
+
+
+
     inputBlocks = parseInt(inputBlocks);
     $wrapper.style.display = 'none';
     $gameBoard.classList.add('game-board--show');
@@ -118,7 +122,7 @@ const checkWin = () => {
 
     if ($lastColumn.children.length === numberOfAllBlocks) {
         setTimeout(function () {
-            alert('youwon')
+            alert('Wygrałeś')
         }, 100);   
     }
 }
@@ -130,8 +134,5 @@ const showModal = () => {
         $modalShadow.style.display = 'none';
     }
 }
-
-
-
 
 document.addEventListener('DOMContentLoaded', main);
