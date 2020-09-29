@@ -23,6 +23,13 @@ header {
   font-weight: 400;
   padding: 10px 0; }
 
+.info-bar {
+  text-align: center;
+  width: 100%;
+  display: none; }
+  .info-bar--show {
+    display: block; }
+
 .button-box {
   position: absolute;
   display: flex;

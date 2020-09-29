@@ -48,6 +48,19 @@ header{
     padding: 10px 0;  
 }
 
+.info-bar{
+    text-align: center;
+    width: 100%;
+    display: none;
+    
+    &__text{
+    }
+
+    &--show{
+        display: block;
+    }
+}
+
 .button-box{
     position: absolute;
     display: flex;
@@ -70,7 +83,7 @@ header{
     transition: box-shadow .3s ease-in-out;
 
     &__rules{
-        margin-bottom: 2px ;
+        margin-bottom: 2px;
         font-size: 25px;
     }
 

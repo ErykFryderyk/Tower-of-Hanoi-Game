@@ -25,8 +25,8 @@ const prepareDOMElements = () => {
 
 const prepareDOMEvents = () => {
     $gameBoard.addEventListener('click', e => selectBlock(e));
-    $btnStart.addEventListener('click', startGame);
     // $btnRules.addEventListener('click', showModal);
+    $btnStart.addEventListener('click', startGame);
     $btnCloseModal.addEventListener('click', showModal);
 };
 
