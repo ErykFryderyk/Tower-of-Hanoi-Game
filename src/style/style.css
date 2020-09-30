@@ -205,14 +205,37 @@ header {
   right: 0;
   background-color: rgba(12, 52, 85, 0.712);
   z-index: 999;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center; }
-  .modal-shadow .modal-box {
-    width: 400px;
-    height: 400px;
-    background-color: gray;
-    text-align: center; }
+  .modal-shadow__box {
+    width: 60%;
+    height: 60%;
+    background-color: #2a67c2;
+    text-align: center;
+    position: relative; }
+  .modal-shadow__title {
+    font-family: 'Grandstander', cursive;
+    letter-spacing: 2px;
+    font-size: 18px;
+    font-weight: 500; }
+  .modal-shadow__close-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 35px;
+    height: 35px;
+    border-bottom-left-radius: 20px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #45d4df;
+    font-size: 20px;
+    transition: box-shadow .3s ease-in, color .3s ease-in;
+    cursor: pointer; }
+    .modal-shadow__close-btn:hover, .modal-shadow__close-btn:focus {
+      box-shadow: -3px 3px 5px 3px rgba(0, 0, 0, 0.24);
+      color: black; }
 
 @media (min-width: 568px) {
   .game-board {
