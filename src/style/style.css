@@ -206,7 +206,7 @@ header {
   right: 0;
   background-color: rgba(12, 52, 85, 0.712);
   z-index: 999;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center; }
   .modal-shadow--show {
@@ -214,7 +214,7 @@ header {
     transition: opacity 1s ease-in-out; }
   .modal-shadow__box {
     width: 60%;
-    height: 60%;
+    min-height: 60%;
     background-color: #2a67c2;
     text-align: center;
     position: relative; }
@@ -224,6 +224,14 @@ header {
     font-size: 20px;
     font-weight: 500;
     padding: 15px 0 10px; }
+  .modal-shadow__image {
+    width: 170px; }
+    @media (min-width: 568px) {
+      .modal-shadow__image {
+        width: 300px; } }
+    @media (min-width: 1024px) {
+      .modal-shadow__image {
+        width: 500px; } }
   .modal-shadow__close-btn {
     position: absolute;
     right: 0;

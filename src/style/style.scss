@@ -288,7 +288,7 @@ header{
     right: 0;
     background-color: rgba(12, 52, 85, 0.712);
     z-index: 999;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 
@@ -299,7 +299,7 @@ header{
 
     &__box{
         width: 60%;
-        height: 60%;
+        min-height: 60%;
         background-color: $blue;
         text-align: center;
         position: relative;
@@ -311,6 +311,17 @@ header{
         font-size: 20px;
         font-weight: 500;
         padding: 15px 0 10px;
+    }
+
+    &__image{
+        width: 170px;
+
+        @media (min-width: 568px){
+            width: 300px;
+        }
+        @media (min-width: 1024px) {
+            width: 500px;
+        }
     }
 
     &__close-btn{
