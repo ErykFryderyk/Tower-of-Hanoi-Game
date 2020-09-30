@@ -8,7 +8,7 @@ const $columnBox = document.querySelector('.column-box');
 const $lastColumn = document.querySelector('.column-box__last-element');
 const $btnRules = document.querySelector('.btn__rules');
 const $modalShadow = document.querySelector('.modal-shadow');
-const $btnCloseModal = document.querySelector('.btn-close-modal')
+const $btnCloseModal = document.querySelector('.modal-shadow__close-btn');
 const $btnRestart = document.querySelector('.btn__restart');
 
 let activeBlock = null;
