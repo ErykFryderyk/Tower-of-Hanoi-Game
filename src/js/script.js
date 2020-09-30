@@ -6,7 +6,7 @@ const $input = document.querySelector('.counter-input');
 const $gameBoard = document.querySelector('.game-board');
 const $columnBox = document.querySelector('.column-box');
 const $lastColumn = document.querySelector('.column-box__last-element');
-const $btnRules = document.querySelector('.btn-rules');
+const $btnRules = document.querySelector('.btn__rules');
 const $modalShadow = document.querySelector('.modal-shadow');
 const $btnCloseModal = document.querySelector('.btn-close-modal')
 const $btnRestart = document.querySelector('.btn__restart');
@@ -126,7 +126,7 @@ const restartGame = () =>{
 
 
 $gameBoard.addEventListener('click', e => selectBlock(e));
-// $btnRules.addEventListener('click', showModal);
+$btnRules.addEventListener('click', showModal);
 $btnStart.addEventListener('click', startGame);
 $btnCloseModal.addEventListener('click', showModal);
 $btnRestart.addEventListener('click', restartGame);
