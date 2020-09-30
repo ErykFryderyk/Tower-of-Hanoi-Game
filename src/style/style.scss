@@ -52,12 +52,15 @@ header{
     text-align: center;
     width: 100%;
     display: none;
-    
+    justify-content: space-around;
+
     &__text{
+        letter-spacing: 1px;
+        font-size: 17px
     }
 
     &--show{
-        display: block;
+        display: flex;
     }
 }
 

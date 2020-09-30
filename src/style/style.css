@@ -26,9 +26,13 @@ header {
 .info-bar {
   text-align: center;
   width: 100%;
-  display: none; }
+  display: none;
+  justify-content: space-around; }
+  .info-bar__text {
+    letter-spacing: 1px;
+    font-size: 17px; }
   .info-bar--show {
-    display: block; }
+    display: flex; }
 
 .button-box {
   position: absolute;
