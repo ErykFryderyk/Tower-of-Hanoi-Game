@@ -1,34 +1,19 @@
 
 const $blocks = document.querySelectorAll('.block');
-console.log($blocks.length);
+const $btnStart = document.querySelector('.start-btn');
+const $wrapper = document.querySelector('.wrapper');
+const $input = document.querySelector('.counter-input');
+const $gameBoard = document.querySelector('.game-board');
+const $columnBox = document.querySelector('.column-box');
+const $lastColumn = document.querySelector('.column-box__last-element');
+const $btnRules = document.querySelector('.btn-rules');
+const $modalShadow = document.querySelector('.modal-shadow');
+const $btnCloseModal = document.querySelector('.btn-close-modal')
+const $btnRestart = document.querySelector('.btn__restart');
 
 let activeBlock = null;
 
-const main = () => {
-    prepareDOMElements();
-    prepareDOMEvents();
-    
-}
 
-const prepareDOMElements = () => {
-    $btnStart = document.querySelector('.start-btn');
-    $wrapper = document.querySelector('.wrapper');
-    $input = document.querySelector('.counter-input');
-    $gameBoard = document.querySelector('.game-board');
-    $columnBox = document.querySelector('.column-box');
-    $lastColumn = document.querySelector('.column-box__last-element');
-    $btnRules = document.querySelector('.btn-rules');
-    $modalShadow = document.querySelector('.modal-shadow');
-    $btnCloseModal = document.querySelector('.btn-close-modal')
-    
-}
-
-const prepareDOMEvents = () => {
-    $gameBoard.addEventListener('click', e => selectBlock(e));
-    // $btnRules.addEventListener('click', showModal);
-    $btnStart.addEventListener('click', startGame);
-    $btnCloseModal.addEventListener('click', showModal);
-};
 
 
 const startGame = () =>{
@@ -135,4 +120,13 @@ const showModal = () => {
     }
 }
 
-document.addEventListener('DOMContentLoaded', main);
+const restartGame = () =>{
+    location.reload();
+}
+
+
+$gameBoard.addEventListener('click', e => selectBlock(e));
+// $btnRules.addEventListener('click', showModal);
+$btnStart.addEventListener('click', startGame);
+$btnCloseModal.addEventListener('click', showModal);
+$btnRestart.addEventListener('click', restartGame);

@@ -86,13 +86,17 @@ header{
     transition: box-shadow .3s ease-in-out;
 
     &__rules{
-        margin-bottom: 2px;
+        margin-bottom: 5px;
         font-size: 25px;
     }
 
     &__restart{
         display: none;
+        &--show-btn{
+            display: block;
+        }
     }
+
 
     &:hover,
     &:focus {
@@ -106,9 +110,8 @@ header{
     width: 100%;
 }
 .wrapper{
-    background-color: rgb(13, 119, 13);
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
