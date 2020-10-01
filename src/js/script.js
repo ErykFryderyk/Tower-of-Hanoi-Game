@@ -5,14 +5,19 @@ const $btnStart = document.querySelector('.start-btn');
 const $wrapper = document.querySelector('.wrapper');
 const $input = document.querySelector('.counter-input');
 const $gameBoard = document.querySelector('.game-board');
+const $infoBar = document.querySelector('.info-bar');
 const $columnBox = document.querySelector('.column-box');
 const $lastColumn = document.querySelector('#last-column');
+const $moveValue = document.querySelector('#move-value');
 const $btnRules = document.querySelector('.btn__rules');
 const $modalShadow = document.querySelector('.modal-shadow');
 const $btnCloseModal = document.querySelector('.modal-shadow__close-btn');
 const $btnRestart = document.querySelector('.btn__restart');
+const $wonBox = document.querySelector('.won-modal');
+const $btnPlayAgain = document.querySelector('#play-again-btn');
 
 let activeBlock = null;
+let moveCounter = 0; 
 
 const increaseValue = () => {
     if($input.value < 7){
@@ -26,6 +31,7 @@ const decreaseValue = () => {
     }
 }
 
+
 // FUNCTION START GAME CHECKING INPUT VALUE
 const startGame = () =>{
     //COUNTER-INPUT VALUE
@@ -34,6 +40,8 @@ const startGame = () =>{
     inputBlocks = parseInt(inputBlocks);
     $wrapper.style.display = 'none';
     $gameBoard.classList.add('game-board--show');
+    $infoBar.classList.add('info-bar--show');
+
 
     if(inputBlocks > 7){
         inputBlocks = 7;
@@ -79,6 +87,9 @@ const selectBlock = e => {
     } else {
         moveBlock(e);
     }
+    console.log(moveCounter);
+    
+
 }
 
 const moveBlock = e => {
@@ -96,6 +107,7 @@ const moveBlock = e => {
     }
     activeBlock.classList.remove('block--active');
     activeBlock = null;
+    
     checkWin();
 }
 
@@ -110,6 +122,9 @@ const createNewBlock = (target) => {
 
     target.prepend(div);
     activeBlock.remove();
+
+    moveCounter++;
+    $moveValue.innerHTML = moveCounter;
 }
 
 const checkWin = () => {
@@ -117,11 +132,12 @@ const checkWin = () => {
     const $blocks = document.querySelectorAll('.block');
 
     numberOfAllBlocks = $blocks.length;
-    console.log(numberOfAllBlocks);
+    // console.log(numberOfAllBlocks);
 
     if ($lastColumn.children.length === numberOfAllBlocks) {
         setTimeout(function () {
             console.log('Wygrałeś');
+            $wonBox.classList.add('won-modal--show');
         }, 100);   
     }
 }
@@ -147,3 +163,4 @@ $btnRules.addEventListener('click', showModal);
 $btnStart.addEventListener('click', startGame);
 $btnCloseModal.addEventListener('click', showModal);
 $btnRestart.addEventListener('click', restartGame);
+$btnPlayAgain.addEventListener('click', restartGame);

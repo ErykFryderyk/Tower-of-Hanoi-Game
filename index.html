@@ -18,9 +18,9 @@
     <main>
         <header>
             <h1 class="title">Tower of Hanoi</h1>
-            <div class="info-bar"> 
-                <p class="info-bar__text">Najmniejsza liczba ruchów: <span>7</span></p>
-                <p class="info-bar__text">Twoje ruchy: <span>1</span></p>
+            <div class="info-bar info-bar--show"> 
+                <p class="info-bar__text">Najmniejsza liczba ruchów: <span>1</span></p>
+                <p class="info-bar__text">Twoje ruchy: <span id="move-value"></span></p>
             </div>
         </header>
 
@@ -44,12 +44,7 @@
             <div class="game-board ">
                 <div class="column-box ">
                     <!-- <div class="block block--width-1" id="1">1</div>
-                    <div class="block block--even block--width-2" id="2">2</div>
-                    <div class="block block--width-3" id="3">3</div>
-                    <div class="block block--even block--width-4" id="4">4</div>
-                    <div class="block block--width-5" id="5">5</div> -->
-                    <!-- <div class="block block--even block--width-6" id="6">6</div> 
-                    <div class="block block--width-7" id="7">7</div> -->
+                    <div class="block block--even block--width-2" id="2">2</div> -->
                 </div>
                 <div class="column-box">
                     <!-- blocks -->
@@ -70,8 +65,6 @@
         </button>
     </div>
 
-
-
     <div class="modal-shadow">
         <div class="modal-shadow__box">
             <button class="modal-shadow__close-btn">
@@ -83,6 +76,14 @@
         </div>
     </div>
 
+    <div class="won-modal">
+        <div class="won-modal__box">
+            <h3>Super wygrałeś !</h3>
+            <p>Twoje ruchy: <span class="">25</span></p>
+            <p>Minimalna liczba ruchów: <span>7</span></p>
+            <button id='play-again-btn' class="button start-btn">Jeszcze raz !</button>
+        </div>
+    </div>
 
 
     <script src="/src/js/script.js"></script>    

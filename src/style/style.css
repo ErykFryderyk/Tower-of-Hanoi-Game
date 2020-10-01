@@ -236,7 +236,7 @@ header {
   bottom: 0;
   right: 0;
   background-color: rgba(12, 52, 85, 0.712);
-  z-index: 999;
+  z-index: 998;
   display: none;
   justify-content: center;
   align-items: center; }
@@ -280,6 +280,32 @@ header {
     .modal-shadow__close-btn:hover, .modal-shadow__close-btn:focus {
       box-shadow: -3px 3px 5px 3px rgba(0, 0, 0, 0.24);
       color: black; }
+
+.won-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(12, 52, 85, 0.712);
+  z-index: 999;
+  display: none;
+  justify-content: center;
+  align-items: center; }
+  .won-modal__box {
+    width: 300px;
+    min-height: 220px;
+    background-color: #0e56c2;
+    text-align: center;
+    position: relative;
+    border-radius: 5px; }
+    .won-modal__box h3 {
+      margin: 10px 0;
+      font-size: 20px; }
+    .won-modal__box p {
+      margin-bottom: 5px; }
+  .won-modal--show {
+    display: flex; }
 
 @media (min-width: 568px) {
   .game-board {
