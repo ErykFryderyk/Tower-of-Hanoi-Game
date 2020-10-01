@@ -4,7 +4,7 @@ $light-gray: #e0e0e0;
 $gray: #a7a7a7;
 $purple: #505591;
 $dark-purple: #393e74;
-$light-blue: #67cdfc;
+$light-blue: #55bbeb;
 $blue: #2a67c2;
 $dark-blue: #0e56c2;
 $brown: #aa6601;
@@ -135,7 +135,48 @@ header{
     }
 
     &__settings{
-        margin-bottom: 40px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        label{
+            margin-bottom: 5px;
+        }
+
+        input{
+            width: 50px;
+            padding: 5px 0px;
+            text-align: center;
+            border-radius: 5px;
+            border: none;
+            font-size: 18px;
+
+        }
+
+        
+    }
+}
+
+.radio-input{
+    margin-top: 5px;
+
+    .radio-btn {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        color: $white;
+        border: none;
+        background-color: $light-blue;
+        font-size: 20px;
+        outline: none;
+        cursor: pointer;
+        line-height: 1;
+    
+        &:hover,
+        &:focus{
+
+        }
     }
 }
 

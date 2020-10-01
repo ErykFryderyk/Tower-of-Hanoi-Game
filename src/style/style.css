@@ -89,7 +89,33 @@ header {
     font-size: 26px;
     letter-spacing: 1px; }
   .start-game__settings {
-    margin-bottom: 40px; }
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .start-game__settings label {
+      margin-bottom: 5px; }
+    .start-game__settings input {
+      width: 50px;
+      padding: 5px 0px;
+      text-align: center;
+      border-radius: 5px;
+      border: none;
+      font-size: 18px; }
+
+.radio-input {
+  margin-top: 5px; }
+  .radio-input .radio-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: #fff;
+    border: none;
+    background-color: #55bbeb;
+    font-size: 20px;
+    outline: none;
+    cursor: pointer;
+    line-height: 1; }
 
 .game-board {
   display: none;
@@ -116,14 +142,14 @@ header {
   border-radius: 5px;
   transition: background-color .3s ease-in-out, box-shadow .3s ease-in-out; }
   .column-box:hover {
-    background-color: #67cdfc;
+    background-color: #55bbeb;
     box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.7); }
   .column-box::before {
     content: '';
     position: absolute;
     height: 90%;
     width: 20px;
-    background-color: #67cdfc;
+    background-color: #55bbeb;
     border: 5px solid #2a67c2;
     border-radius: 25px;
     left: 50%;

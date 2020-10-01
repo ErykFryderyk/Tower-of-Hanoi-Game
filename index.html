@@ -29,8 +29,12 @@
                 <div class="start-game">
                     <h2>Witaj w grze! </h2>
                     <div class="start-game__settings">
-                        <label for="block-number">Wybierz liczbę krążków: </label>
-                        <input class="counter-input" type="number" name="block-number" value='3' min="3" max="7">
+                        <label for="block-number">Wybierz liczbę krążków</label>
+                        <div class="radio-input">
+                            <button id="plus-btn" class="radio-btn"><i class="fas fa-plus"></i></button>
+                            <input class="counter-input" type="number" name="block-number" value='3' min="3" max="7">
+                            <button id="minus-btn "class="radio-btn"><i class="fas fa-minus"></i></button>
+                        </div>
                     </div>
                     <button class="start-btn">Start!</button>
                 </div>
