@@ -1,5 +1,4 @@
 
-const $blocks = document.querySelectorAll('.block');
 const $addRadio = document.querySelector('#plus-btn');
 const $minusRadio = document.querySelector('#minus-btn');
 const $btnStart = document.querySelector('.start-btn');
@@ -7,7 +6,7 @@ const $wrapper = document.querySelector('.wrapper');
 const $input = document.querySelector('.counter-input');
 const $gameBoard = document.querySelector('.game-board');
 const $columnBox = document.querySelector('.column-box');
-const $lastColumn = document.querySelector('.column-box__last-element');
+const $lastColumn = document.querySelector('#last-column');
 const $btnRules = document.querySelector('.btn__rules');
 const $modalShadow = document.querySelector('.modal-shadow');
 const $btnCloseModal = document.querySelector('.modal-shadow__close-btn');
@@ -85,7 +84,7 @@ const selectBlock = e => {
 const moveBlock = e => {
     const target = e.target;
     const parent = target.parentElement;
-    console.log(parent);
+    // console.log(parent);
     if(target.classList.contains('column-box')){
         if(target.children.length === 0) {
             createNewBlock(target);
@@ -97,7 +96,7 @@ const moveBlock = e => {
     }
     activeBlock.classList.remove('block--active');
     activeBlock = null;
-    // checkWin();
+    checkWin();
 }
 
 const createNewBlock = (target) => {
@@ -114,12 +113,15 @@ const createNewBlock = (target) => {
 }
 
 const checkWin = () => {
+    
+    const $blocks = document.querySelectorAll('.block');
+
     numberOfAllBlocks = $blocks.length;
     console.log(numberOfAllBlocks);
 
     if ($lastColumn.children.length === numberOfAllBlocks) {
         setTimeout(function () {
-            alert('Wygrałeś')
+            console.log('Wygrałeś');
         }, 100);   
     }
 }
