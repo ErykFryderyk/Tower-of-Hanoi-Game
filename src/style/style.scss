@@ -33,7 +33,7 @@ header{
     background-color: $blue;
     position: relative;
     margin-bottom: 10px;
-    box-shadow: 0px 0px 20px 5px $blue;
+    box-shadow: 0px 0px 20px 0px $blue;
 }
 
 
@@ -76,7 +76,7 @@ header{
 }
 
 .btn{
-    color: $light-blue;
+    color: $blue;
     padding: 7px 10px;
     cursor: pointer;
     border: none;
@@ -92,6 +92,7 @@ header{
 
     &__restart{
         display: none;
+
         &--show-btn{
             display: block;
         }
@@ -124,7 +125,8 @@ header{
     flex-direction: column;
     padding: 20px 20px;
     width: 300px;
-    background-color: $green2;
+    background-color: $blue;
+    border-radius: 5px;
 
     h2{
         margin-bottom: 20px;
@@ -203,8 +205,6 @@ header{
     }
 }
 
-
-
 .block{
     height: 29px;
     border: 5px solid $blue;
@@ -266,7 +266,7 @@ header{
     border: none;
     border-radius: 100px;
     padding: 6px 35px;
-    background-color: $blue;
+    background-color: $dark-blue;
     outline: none;
     box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.7);
     margin-bottom: 20px;
@@ -276,7 +276,7 @@ header{
     &:hover,
     &:focus{
         box-shadow: 0px 0px 20px 0px rgba(0, 0, 0,0.7);
-        background-color: $dark-blue;
+        background-color: $blue;
     }
 }
 
@@ -308,7 +308,7 @@ header{
     &__title{
         font-family: 'Grandstander', cursive;
         letter-spacing: 2px;
-        font-size: 20px;
+        font-size: 24px;
         font-weight: 500;
         padding: 15px 0 10px;
     }

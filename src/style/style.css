@@ -12,7 +12,7 @@ header {
   background-color: #2a67c2;
   position: relative;
   margin-bottom: 10px;
-  box-shadow: 0px 0px 20px 5px #2a67c2; }
+  box-shadow: 0px 0px 20px 0px #2a67c2; }
 
 .title {
   text-align: center;
@@ -45,7 +45,7 @@ header {
   align-items: center; }
 
 .btn {
-  color: #67cdfc;
+  color: #2a67c2;
   padding: 7px 10px;
   cursor: pointer;
   border: none;
@@ -82,7 +82,8 @@ header {
   flex-direction: column;
   padding: 20px 20px;
   width: 300px;
-  background-color: #3bbcc5; }
+  background-color: #2a67c2;
+  border-radius: 5px; }
   .start-game h2 {
     margin-bottom: 20px;
     font-size: 26px;
@@ -188,7 +189,7 @@ header {
   border: none;
   border-radius: 100px;
   padding: 6px 35px;
-  background-color: #2a67c2;
+  background-color: #0e56c2;
   outline: none;
   box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.7);
   margin-bottom: 20px;
@@ -196,7 +197,7 @@ header {
   cursor: pointer; }
   .start-btn:hover, .start-btn:focus {
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.7);
-    background-color: #0e56c2; }
+    background-color: #2a67c2; }
 
 .modal-shadow {
   position: absolute;
@@ -221,7 +222,7 @@ header {
   .modal-shadow__title {
     font-family: 'Grandstander', cursive;
     letter-spacing: 2px;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 500;
     padding: 15px 0 10px; }
   .modal-shadow__image {
