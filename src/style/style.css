@@ -11,7 +11,7 @@ body {
 header {
   background-color: #2a67c2;
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   box-shadow: 0px 0px 20px 0px #2a67c2; }
 
 .title {
@@ -117,9 +117,12 @@ header {
     cursor: pointer;
     line-height: 1;
     transition: box-shadow .3s ease-in-out;
-    -webkit-tap-highlight-color: transparent; }
+    -webkit-tap-highlight-color: transparent;
+    margin: 0 5px 0 0; }
     .radio-input .radio-btn:hover, .radio-input .radio-btn:focus {
       box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.7); }
+    .radio-input .radio-btn:last-child {
+      margin: 0 0 0 5px; }
 
 .game-board {
   display: none;

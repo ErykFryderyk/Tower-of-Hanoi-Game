@@ -32,7 +32,7 @@ body{
 header{
     background-color: $blue;
     position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     box-shadow: 0px 0px 20px 0px $blue;
 }
 
@@ -153,8 +153,6 @@ header{
             font-size: 18px;
 
         }
-
-        
     }
 }
 
@@ -174,11 +172,15 @@ header{
         line-height: 1;
         transition: box-shadow .3s ease-in-out;
         -webkit-tap-highlight-color: transparent;
+        margin: 0 5px 0 0;
     
         &:hover,
         &:focus{
             box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.7);
         }
+    &:last-child {
+        margin: 0 0 0 5px;
+    }
     }
 }
 

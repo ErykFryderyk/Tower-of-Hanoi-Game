@@ -15,9 +15,12 @@ const $btnCloseModal = document.querySelector('.modal-shadow__close-btn');
 const $btnRestart = document.querySelector('.btn__restart');
 const $wonBox = document.querySelector('.won-modal');
 const $btnPlayAgain = document.querySelector('#play-again-btn');
+const $spanNumberOfMoving = document.querySelector('.number-moving');
+
 
 let activeBlock = null;
 let moveCounter = 0; 
+let numberOfMoving = null;
 
 const increaseValue = () => {
     if($input.value < 7){
@@ -132,8 +135,11 @@ const checkWin = () => {
     const $blocks = document.querySelectorAll('.block');
 
     numberOfAllBlocks = $blocks.length;
+    numberOfMoving = (Math.pow(2,numberOfAllBlocks)-1);
+    console.log(numberOfMoving);
+    $spanNumberOfMoving.innerHTML = numberOfMoving;
+    
     // console.log(numberOfAllBlocks);
-
     if ($lastColumn.children.length === numberOfAllBlocks) {
         setTimeout(function () {
             console.log('Wygrałeś');
