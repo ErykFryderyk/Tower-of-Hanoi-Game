@@ -1,5 +1,7 @@
 
 const $blocks = document.querySelectorAll('.block');
+const $addRadio = document.querySelector('#plus-btn');
+const $minusRadio = document.querySelector('#minus-btn');
 const $btnStart = document.querySelector('.start-btn');
 const $wrapper = document.querySelector('.wrapper');
 const $input = document.querySelector('.counter-input');
@@ -13,13 +15,22 @@ const $btnRestart = document.querySelector('.btn__restart');
 
 let activeBlock = null;
 
+const increaseValue = () => {
+    if($input.value < 7){
+        $input.value = parseInt($input.value) + 1;
+    }
+}
 
+const decreaseValue = () => {
+    if ($input.value > 3) {
+        $input.value = $input.value - 1;
+    }
+}
 
-
+// FUNCTION START GAME CHECKING INPUT VALUE
 const startGame = () =>{
+    //COUNTER-INPUT VALUE
     let inputBlocks = $input.value;
-
-
 
     inputBlocks = parseInt(inputBlocks);
     $wrapper.style.display = 'none';
@@ -31,9 +42,10 @@ const startGame = () =>{
         inputBlocks = 3;
     }
     createBlocksToStart(inputBlocks);
-
 };
 
+
+// FUNCTION CREATE NEW BLOCKS 
 const createBlocksToStart = (numberBlocks) => {    
 
     for (let i = numberBlocks; i > 0; i--) {
@@ -124,6 +136,9 @@ const restartGame = () =>{
     location.reload();
 }
 
+
+$addRadio.addEventListener('click', increaseValue);
+$minusRadio.addEventListener('click', decreaseValue);
 
 $gameBoard.addEventListener('click', e => selectBlock(e));
 $btnRules.addEventListener('click', showModal);
