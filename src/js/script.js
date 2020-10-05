@@ -12,10 +12,12 @@ const $moveValue = document.querySelector('#move-value');
 const $btnRules = document.querySelector('.btn__rules');
 const $modalShadow = document.querySelector('.modal-shadow');
 const $btnCloseModal = document.querySelector('.modal-shadow__close-btn');
-const $btnRestart = document.querySelector('.btn__restart');
+const $btnRestart = document.querySelector('.btn__reload');
 const $wonBox = document.querySelector('.won-modal');
 const $btnPlayAgain = document.querySelector('#play-again-btn');
 const $spanNumberOfMoving = document.querySelector('.number-moving');
+const $modalCountMoves = document.querySelector('.modal-count-moves');
+const $minCountMoves = document.querySelector('.min-count-moves');
 
 
 let activeBlock = null;
@@ -67,7 +69,6 @@ const createBlocksToStart = (numberBlocks) => {
 
     for (let i = numberBlocks; i > 0; i--) {
         let number = i;
-        console.log(number);    
         
         const div = document.createElement('div');
         div.classList.add('block');
@@ -97,15 +98,13 @@ const selectBlock = e => {
     } else {
         moveBlock(e);
     }
-    console.log(moveCounter);
-    
-
 }
 
 const moveBlock = e => {
     const target = e.target;
     const parent = target.parentElement;
-    // console.log(parent);
+    console.log(target.classList);
+    console.log(activeBlock.classList);
     if(target.classList.contains('column-box')){
         if(target.children.length === 0) {
             createNewBlock(target);
@@ -139,13 +138,11 @@ const createNewBlock = (target) => {
 }
 
 const checkWin = () => {
-    
-    
-    
     if ($lastColumn.children.length === numberOfAllBlocks) {
         setTimeout(function () {
-            console.log('Wygrałeś');
             $wonBox.classList.add('won-modal--show');
+            $modalCountMoves.innerHTML = moveCounter;
+            $minCountMoves.innerHTML = numberOfMoving;
         }, 100);   
     }
 }

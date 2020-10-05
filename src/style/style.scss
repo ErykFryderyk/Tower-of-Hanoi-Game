@@ -1,17 +1,14 @@
 $black: #000;
 $white: #fff;
-$light-gray: #e0e0e0;
-$gray: #a7a7a7;
+$light-gray: #e6e6e6;
 $purple: #505591;
 $dark-purple: #393e74;
 $light-blue: #55bbeb;
 $blue: #2a67c2;
 $dark-blue: #0e56c2;
-$brown: #aa6601;
 $yellow: #bbd42c;
 $yellow-second: #97ac24;
 $green: #45d4df;
-$green2:#3bbcc5;
 
 
 $brown-gradient: linear-gradient(0deg, rgba(170, 102, 1, 1) 0%, rgba(217, 130, 0, 1) 50%, rgb(214, 145, 1) 100%);
@@ -68,8 +65,8 @@ header{
     position: absolute;
     display: flex;
     flex-direction: column;
-    top: 60px;
-    right: 10px;
+    top: 85px;
+    right: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,7 +87,7 @@ header{
         font-size: 25px;
     }
 
-    &__restart{
+    &__reload{
         display: none;
 
         &--show-btn{
@@ -190,8 +187,8 @@ header{
     align-items: center;
     flex-direction: column;
     width: 100%;
-    min-height: calc(100vh - 70px);
-    background-color: $green2;
+    min-height: calc(100vh - 90px);
+    background-color: #abe1fa;
 
 
     &--show{
@@ -201,8 +198,7 @@ header{
 
 .column-box{
     width: 100%;
-    min-height: 260px;
-    margin-bottom: 5px;
+    min-height: 240px;
     position: relative;
     display: flex;
     justify-content: flex-end;
@@ -251,11 +247,12 @@ header{
 }
 
 .block{
-    height: 29px;
+    height: 25px;
     border: 5px solid $blue;
     background-color: $yellow;
     border-radius: 50px;
     z-index: 1;
+    line-height: 1.3;
     text-align: center;
     font-size: 14px;
     color: $purple;
@@ -468,6 +465,7 @@ header{
     .block{
         height: 37px;
         font-size: 18px;
+        line-height: 1.6;
 
         &:last-child{
             margin-bottom: 30px;
