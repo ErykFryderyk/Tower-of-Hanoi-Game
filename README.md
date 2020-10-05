@@ -22,5 +22,5 @@ The objective of the puzzle is to move the stack to another peg following these 
 
 ### DEMO
 ```sh
-[Tower of Hanoi Game DEMO](link)
+[Tower of Hanoi Game DEMO](https://erykfryderyk.github.io/Tower-of-Hanoi-Game/)
 ```
