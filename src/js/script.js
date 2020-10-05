@@ -103,8 +103,7 @@ const selectBlock = e => {
 const moveBlock = e => {
     const target = e.target;
     const parent = target.parentElement;
-    console.log(target.classList);
-    console.log(activeBlock.classList);
+
     if(target.classList.contains('column-box')){
         if(target.children.length === 0) {
             createNewBlock(target);
