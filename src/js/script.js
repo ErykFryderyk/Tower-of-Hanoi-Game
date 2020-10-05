@@ -39,19 +39,26 @@ const decreaseValue = () => {
 const startGame = () =>{
     //COUNTER-INPUT VALUE
     let inputBlocks = $input.value;
-
+    
+    
     inputBlocks = parseInt(inputBlocks);
     $wrapper.style.display = 'none';
     $gameBoard.classList.add('game-board--show');
     $infoBar.classList.add('info-bar--show');
-
-
+    
+    
     if(inputBlocks > 7){
         inputBlocks = 7;
     } else if(inputBlocks < 3){
         inputBlocks = 3;
     }
     createBlocksToStart(inputBlocks);
+    
+    const $blocks = document.querySelectorAll('.block');
+    numberOfAllBlocks = $blocks.length;
+    numberOfMoving = (Math.pow(2, numberOfAllBlocks) - 1);
+    $spanNumberOfMoving.innerHTML = numberOfMoving;
+
 };
 
 
@@ -114,6 +121,7 @@ const moveBlock = e => {
     checkWin();
 }
 
+//CREATE NEW BLOCK ELEMENT IN CHOSE COLUMN BOX 
 const createNewBlock = (target) => {
     activeBlock.classList.remove('block--active');
     const div = document.createElement('div');
@@ -132,14 +140,8 @@ const createNewBlock = (target) => {
 
 const checkWin = () => {
     
-    const $blocks = document.querySelectorAll('.block');
-
-    numberOfAllBlocks = $blocks.length;
-    numberOfMoving = (Math.pow(2,numberOfAllBlocks)-1);
-    console.log(numberOfMoving);
-    $spanNumberOfMoving.innerHTML = numberOfMoving;
     
-    // console.log(numberOfAllBlocks);
+    
     if ($lastColumn.children.length === numberOfAllBlocks) {
         setTimeout(function () {
             console.log('Wygrałeś');
