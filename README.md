@@ -1,5 +1,5 @@
 # Tower of Hanoi 
- Tower of Hanoi it's a simple game inspired a puzzle invented by French mathematician Édouard Lucas in 1883.
+ Tower of Hanoi is a simple game inspired a puzzle invented by French mathematician Édouard Lucas in 1883.
  
  Welcome game screen: 
  ![Image of screen game](src/img/Tower-of-Hanoi_iPhone-5_SE.png)
